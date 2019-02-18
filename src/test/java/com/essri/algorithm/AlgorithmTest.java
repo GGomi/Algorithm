@@ -15,6 +15,8 @@ public class AlgorithmTest {
     private PrinterVersion printerVersion;
     private Printer printer;
     private SteelStick steelStick;
+    private NumericalBaseball numericalBaseball;
+    private MakeOne makeOne;
 
     @Test
     public void bigNumberTest() {
@@ -71,6 +73,20 @@ public class AlgorithmTest {
         steelStick = new SteelStick();
         String input = "()(((()())(())()))(())";
         assertEquals("17",String.valueOf(steelStick.solution(input)));
+    }
+
+    @Test
+    public void numericalBaseballTest() {
+        int[][] arr = {{123, 0, 0},{356, 1, 0},{327, 2, 0},{489, 0, 1}};
+
+        numericalBaseball = new NumericalBaseball(arr);
+        numericalBaseball.solution(arr);
+    }
+
+    @Test
+    public void makeOneTest() {
+        makeOne = new MakeOne(10);
+        assertEquals(makeOne.solution(),3);
     }
 
 }
