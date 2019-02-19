@@ -31,6 +31,7 @@
 - [MakeOne](src/main/java/com/essri/algorithm/MakeOne.java) BOJ - No.1463
 - [Gear](src/main/java/com/essri/algorithm/MakeOne.java) BOJ - No.14981
 - [SoccerGame](src/main/java/com/essri/algorithm/SoccerGame.java) - BOJ No.13560
+- [Coins](src/main/java/com/essri/algorithm/Coins.java)
 
 
 
