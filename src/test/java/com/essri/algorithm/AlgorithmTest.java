@@ -2,9 +2,10 @@ package com.essri.algorithm;
 
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.Arrays;
-
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class AlgorithmTest {
     private BigNumber bigNumber;
@@ -15,8 +16,9 @@ public class AlgorithmTest {
     private PrinterVersion printerVersion;
     private Printer printer;
     private SteelStick steelStick;
-    private NumericalBaseball numericalBaseball;
     private MakeOne makeOne;
+    private InsertionSort insertionSort;
+    private CountTenCharacter countTenCharacter;
 
     @Test
     public void bigNumberTest() {
@@ -76,17 +78,22 @@ public class AlgorithmTest {
     }
 
     @Test
-    public void numericalBaseballTest() {
-        int[][] arr = {{123, 0, 0},{356, 1, 0},{327, 2, 0},{489, 0, 1}};
-
-        numericalBaseball = new NumericalBaseball(arr);
-        numericalBaseball.solution(arr);
-    }
-
-    @Test
     public void makeOneTest() {
         makeOne = new MakeOne(10);
         assertEquals(makeOne.solution(),3);
     }
 
+    @Test
+    public void insertionSort() {
+        int[] arr = {1,2,2,3,5};
+        insertionSort = new InsertionSort(new int[] {3,2,5,1,2});
+        assertEquals(Arrays.toString(insertionSort.sort()),Arrays.toString(arr));
+    }
+
+    @Test
+    public void countTenCharacter() {
+        String input = "BaekjoonOnlineJudge";
+        countTenCharacter = new CountTenCharacter(input);
+        assertEquals(countTenCharacter.solve(), "BaekjoonOn\nlineJudge");
+    }
 }
