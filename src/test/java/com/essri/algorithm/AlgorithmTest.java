@@ -2,10 +2,12 @@ package com.essri.algorithm;
 
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Arrays;
+
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class AlgorithmTest {
     private BigNumber bigNumber;
@@ -19,6 +21,7 @@ public class AlgorithmTest {
     private MakeOne makeOne;
     private InsertionSort insertionSort;
     private CountTenCharacter countTenCharacter;
+    private MakeMaze makeMaze;
 
     @Test
     public void bigNumberTest() {
@@ -95,5 +98,14 @@ public class AlgorithmTest {
         String input = "BaekjoonOnlineJudge";
         countTenCharacter = new CountTenCharacter(input);
         assertEquals(countTenCharacter.solve(), "BaekjoonOn\nlineJudge");
+    }
+
+    @Test
+    public void makeMazeTest() throws IOException {
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+        makeMaze = new MakeMaze(5,"RRFRF");
+        makeMaze.solve();
+        assertEquals("..\n.#\n", outputStream.toString());
     }
 }
