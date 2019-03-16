@@ -22,6 +22,7 @@ public class AlgorithmTest {
     private InsertionSort insertionSort;
     private CountTenCharacter countTenCharacter;
     private MakeMaze makeMaze;
+    private Woowa woowa;
 
     @Test
     public void bigNumberTest() {
@@ -108,4 +109,11 @@ public class AlgorithmTest {
         makeMaze.solve();
         assertEquals("..\n.#\n", outputStream.toString());
     }
+
+    @Test
+    public void clapTest() {
+
+        assertEquals(4, woowa.solution(13));
+    }
+
 }
