@@ -6,7 +6,7 @@
 **junit 테스트를 통해서 테스트할 수 있습니다**
 
 ## 목차
-
+### [자료구조 학습](/docs/index.md)
 ### Sorting Algorithm
 - [BubbleSort](src/main/java/com/essri/algorithm/BubbleSort.java)
 - [QuickSort](src/main/java/com/essri/algorithm/QuickSort.java)
