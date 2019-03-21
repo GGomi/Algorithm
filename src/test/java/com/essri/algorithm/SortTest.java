@@ -28,8 +28,10 @@ public class SortTest {
         assertEquals("[1, 2, 3, 3, 4, 6, 7, 8, 9]",Arrays.toString(selectionSort.sort(arr)));
     }
 
+
     @Test
-    public void mergeTest() {
-        assertEquals("[1, 2, 3, 3, 4, 6, 7, 8, 9]",Arrays.toString(mergeSort.sort(arr)));
+    public void mergeSortTest() {
+        mergeSort = new MergeSort(arr);
+        assertEquals("[1, 2, 3, 3, 4, 6, 7, 8, 9]",Arrays.toString(mergeSort.sort(0,arr.length-1)));
     }
 }

@@ -1,56 +1,48 @@
 package com.essri.algorithm;
 
 public class MergeSort {
-    public static int[] sort;
 
-    public static int[] sort(int[] arr) {
-        sort = new int[arr.length];
-        mergeSort(0, arr.length-1,arr);
-        return sort;
+    private int[] arr;
+    private int[] tmparr;
+
+    public MergeSort(int[] arr) {
+        this.arr = arr;
+        this.tmparr = new int[arr.length];
     }
 
-    public static void mergeSort(int left, int right,int[] arr){
-        int mid;
-        if(left<right){
-            mid = (left+right)/2;
-            mergeSort(left, mid, arr);
-            mergeSort(mid+1, right, arr);
-            merge(left, mid, right, arr);
+    public int[] sort(int start, int end) {
+        if(end > start) {
+            sort(start, (start + end) / 2);
+            sort((start + end) / 2 + 1, end);
         }
+
+        merge(start, end);
+
+        return arr;
     }
 
-    public static void merge(int left, int mid, int right, int[] arr){
-        int l = left;
-        int m = mid+1;
-        int k = left;
+    public void merge(int start, int end) {
+        int i = start, j = (start + end) / 2 + 1;
+        int mid = (start + end) / 2;
+        int count = start;
 
-        while(l<=mid || m<=right){
-            if(l<=mid && m<=right){
-                if(arr[l]<=arr[m]){
-                    sort[k] = arr[l++];
-                }else{
-                    sort[k] = arr[m++];
-                }
-            }else if(l<=mid && m>right){
-                sort[k] = arr[l++];
-            }else{
-                sort[k] = arr[m++];
-            }
-
-            k++;
+        while(i <= (start + end) / 2 && j <= end)
+        {
+            if(arr[i] > arr[j])
+                tmparr[count++] = arr[j++];
+            else
+                tmparr[count++] = arr[i++];
         }
-        while(l<=mid || m<=right) {
-            if(l<=mid && m<=right) {
-                if(arr[l] <= arr[m]) {
-                    sort[k] = arr[l++];
-                } else {
-
-                }
-            }
+        while(i <= (start + end) / 2) {
+            tmparr[count++] = arr[i++];
         }
 
-        for(int i=left; i<right+1; i++){
-            arr[i] = sort[i];
+        while(j <= end) {
+            tmparr[count++] = arr[j++];
+        }
+
+        for(i = start; i <= end; i++) {
+            arr[i] = tmparr[i];
         }
     }
 }
