@@ -1,7 +1,5 @@
 package com.essri.algorithm;
 
-import java.util.Arrays;
-
 public class InsertionSort {
     int[] array;
 
