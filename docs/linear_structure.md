@@ -45,7 +45,7 @@
     - push() : 가장 위로 들어가므로 O(1)
     - peek() : pop과 같음 
     - size() : 배열로 구현할 시 O(1), 연결리스트로 구현할 시 O(n)
-
+- [소스코드](/src/main/java/com/essri/algorithm/StackExample.java)
 ## 큐
 먼저 들어간 자료가 먼저 나오는 자료구조. 선입선출(先入先出) 구조라고도 한다. 자료를 넣는 Enqueue 함수와 자료를 빼내는 Dequeue 함수를 가진다.
 
