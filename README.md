@@ -17,6 +17,9 @@
 - [NotCompletePerson](src/main/java/com/essri/algorithm/NotCompletePerson.java)
 - [GiveupMath](src/main/java/com/essri/algorithm/GiveupMath.java)
 - [BigNumber](src/main/java/com/essri/algorithm/BigNumber.java)
+- [다리를 지나는 트럭](src/main/java/com/essri/algorithm/Bridge.java)
+- [FindAlphabet](src/main/java/com/essri/algorithm/FindAlphabet.java)
+- [Bakery](src/main/java/com/essri/algorithm/Bakery.java) BOJ - No. 3109
 - [MakeOne](src/main/java/com/essri/algorithm/MakeOne.java) BOJ - No.1463
 - [Gear](src/main/java/com/essri/algorithm/MakeOne.java) BOJ - No.14981
 - [SoccerGame](src/main/java/com/essri/algorithm/SoccerGame.java) - BOJ No.13560
