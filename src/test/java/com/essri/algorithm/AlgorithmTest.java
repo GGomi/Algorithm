@@ -23,6 +23,7 @@ public class AlgorithmTest {
     private CountTenCharacter countTenCharacter;
     private MakeMaze makeMaze;
     private Woowa woowa;
+    private Bridge bridge;
 
     @Test
     public void bigNumberTest() {
@@ -112,8 +113,13 @@ public class AlgorithmTest {
 
     @Test
     public void clapTest() {
-
         assertEquals(4, woowa.solution(13));
+    }
+
+    @Test
+    public void bridgeTest() {
+        bridge = new Bridge(2,10,new int[]{7,4,5,6});
+        System.out.println(bridge.solution());
     }
 
 }
